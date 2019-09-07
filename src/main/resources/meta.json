@@ -1,0 +1,100 @@
+{
+    "javaConfig": {
+        "author":"feizns",
+        "date":"",
+        "package": {
+            "controller":"controller",
+            "service":"service",
+            "mapper":"mapper",
+            "view":"view",
+            "pojo":"pojo",
+            "ao":"ao",
+            "vo":"vo"
+        }
+    },
+
+    "dataConfig": {
+        "url":"jdbc:mysql://localhost:3306/javaweb_student?characterEncoding=UTF-8",
+        "username":"root",
+        "password":"123456"
+    },
+
+    "imgConfig": {
+        "url":"imgurl",
+        "params":{}
+    },
+
+    "metaData":{
+        "table": {
+        	"tableName":"student",
+            "comment":"用作学生表",
+            "fields": [
+                {
+                    "name":"name",
+                    "id":"id",
+                    "comment":"学生姓名",
+                    "pk": {
+                        "type":"auto"
+                    },
+                    "type": {
+                        "javaType":"String",
+                        "jdbcType":"null",
+                        "viewType":{
+                            "name":"text",
+                            "placeholder":"张三",
+
+                            "name":"type",
+                            "placeholder":"",
+                            "by":"/api/v1/xxx"
+                        }
+                    },
+                    "nullable":"false",
+                    "unique":"false",
+                    "min":0,
+                    "max":10,
+                    "exists": {
+                        "by":"otherTableName.fieldName"
+                    }
+                }
+            ],
+            "api": {
+                "LIST": {},
+                "DETAILS": {},
+                "UPDATE": {},
+                "CREATE": {},
+                "DELETE": {},
+                "customize": {
+                    "method":"GET",
+                    "url":"/api/xx",
+                    "ao": {
+                        "fields":[],
+                        "condition": {
+                            "where":"",
+                            "fields":[
+                                {
+                                    "name":""
+                                },
+                                {
+                                    "name":"",
+                                    "cond": {
+                                        "type":"gt",
+                                        "field":"createdAt"
+                                    }
+                                }
+                            ],
+                            "orderBy":[{"field":"desc"}]
+                        }
+                    },
+                    "vo": {
+                        "fields":[
+                            {
+                                "name":"",
+                                "alias":""
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

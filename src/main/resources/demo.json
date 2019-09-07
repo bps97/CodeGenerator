@@ -1,0 +1,81 @@
+{
+  "table": {
+    "tableName": "student123",
+    "comment": "comment1",
+    "fields": [
+      {
+        "fieldName": "fieldName1",
+        "size": "255",
+        "comment": "这里是一个注释",
+        "fieldType":
+          {
+            "viewType": "view-type",
+            "jdbcType": "varchar",
+            "javaType": "java-type"
+          },
+        "stint": 
+          {
+            "nullable": false,
+            "primary": true,
+            "unique": true,
+            "min": "0",
+            "max": "255"
+          }
+        
+      },
+      {
+        "fieldName": "teacher123",
+        "size": "255",
+        "comment": "这里又是一个注释",
+        "fieldType":
+        {
+          "viewType": "view-type",
+          "jdbcType": "varchar",
+          "javaType": "java-type"
+        },
+        "stint":
+        {
+          "nullable": false,
+          "primary": true,
+          "unique": true,
+          "min": "0",
+          "max": "255"
+        }
+
+      }
+    ],
+    "api": [
+      {
+        "default": [
+          {
+            "LIST": {},
+            "DETAILS": {},
+            "CREATE": {},
+            "UPDATE": {},
+            "DELETE": {}
+          }
+        ],
+        "prefix": "prefix"
+      }
+    ]
+  },
+
+  "dataConfig": {
+    "url":"jdbc:mysql://localhost:3306/javaweb_student?characterEncoding=UTF-8&useSSL=false",
+    "username":"root",
+    "password":"123456"
+  },
+  "javaConfig": {
+    "author":"feizns",
+    "date":"",
+    "package": {
+      "controller":"controller",
+      "service":"service",
+      "mapper":"mapper",
+      "view":"view",
+      "pojo":"pojo",
+      "ao":"ao",
+      "vo":"vo"
+    }
+  }
+}
